@@ -1,6 +1,6 @@
 Game_name:青廉侨心・数字清廉课堂 V1.0;
 Game_key:8f6add40ddc9e88;
 Title_img:6b99c181c60373eb092885c0db48bab2.jpg;
-Title_bgm:s_Title.mp3;
+Title_bgm:开始.MP3;
 Textbox_theme:imss;
 Game_Logo:;
