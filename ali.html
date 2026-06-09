@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
     />
-    <base href="https://qinglian-webgal-arbor87-20260609.oss-cn-hangzhou.aliyuncs.com/v2/" />
+    <base href="https://qinglian-webgal-arbor87-20260609.oss-cn-hangzhou.aliyuncs.com/v3/" />
     <link rel="icon" type="image/x-icon" href="./icons/favicon.ico" />
     <title>青廉侨心・数字清廉课堂 V1.0</title>
     <style>
@@ -56,6 +56,23 @@
         } catch {}
 
         window.live2dPromise = Promise.resolve([false, false]);
+        const NativeImage = window.Image;
+        window.Image = function Image(width, height) {
+          const image = new NativeImage(width, height);
+          image.crossOrigin = 'anonymous';
+          return image;
+        };
+        window.Image.prototype = NativeImage.prototype;
+
+        const nativeCreateElement = document.createElement.bind(document);
+        document.createElement = (tagName, options) => {
+          const element = nativeCreateElement(tagName, options);
+          if (String(tagName).toLowerCase() === 'img') {
+            element.crossOrigin = 'anonymous';
+          }
+          return element;
+        };
+
         window.renderPromiseResolve = () => {
           const loading = document.querySelector('.wechat-loading');
           if (loading) loading.remove();
