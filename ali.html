@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <base href="https://qinglian-webgal-arbor87-20260609.oss-cn-hangzhou.aliyuncs.com/" />
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico" />
+    <title>青廉侨心・数字清廉课堂 V1.0</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background: #dff7f4 !important;
+      }
+
+      #root,
+      #html-body__panic-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .wechat-loading {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #dff7f4;
+        color: #07384d;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 16px;
+        z-index: 9999;
+      }
+    </style>
+    <script>
+      (() => {
+        try {
+          window.localStorage.setItem('lang', '0');
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations()
+              .then((registrations) => Promise.all(registrations.map((reg) => reg.unregister())))
+              .catch(() => {});
+          }
+          if ('caches' in window) {
+            caches.keys()
+              .then((keys) => Promise.all(keys.map((key) => caches.delete(key))))
+              .catch(() => {});
+          }
+        } catch {}
+
+        window.live2dPromise = Promise.resolve([false, false]);
+        window.renderPromiseResolve = () => {
+          const loading = document.querySelector('.wechat-loading');
+          if (loading) loading.remove();
+        };
+
+        const resize = () => {
+          const targetWidth = 2560;
+          const targetHeight = 1440;
+          const w = window.innerWidth;
+          const h = window.innerHeight;
+          const scale = Math.min(w / targetWidth, h / targetHeight);
+          const left = (w - targetWidth * scale) / 2;
+          const top = (h - targetHeight * scale) / 2;
+          const transform = `translate(${left}px, ${top}px) scale(${scale}, ${scale})`;
+          const root = document.querySelector('#root');
+          const panic = document.querySelector('#html-body__panic-overlay');
+          for (const element of [root, panic]) {
+            if (element) {
+              element.style.width = `${targetWidth}px`;
+              element.style.height = `${targetHeight}px`;
+              element.style.transformOrigin = '0 0';
+              element.style.transform = transform;
+            }
+          }
+        };
+
+        window.addEventListener('load', resize);
+        window.addEventListener('resize', resize);
+        document.addEventListener('DOMContentLoaded', resize);
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-49446313.js"></script>
+    <link rel="stylesheet" href="./assets/index-52a967b4.css" />
+    <style>
+      html,
+      body {
+        background: #dff7f4 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wechat-loading">正在加载，请稍候...</div>
+    <div id="html-body__panic-overlay"></div>
+    <div id="root"></div>
+  </body>
+</html>
