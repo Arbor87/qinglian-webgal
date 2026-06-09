@@ -15,4 +15,3 @@ playEffect:点击.MP3 -volume=100;
 changeBg:考场.jpg;
  -sayPlaceHolder;
 choose:心存侥幸，背诵答案应付考试:1A.txt|认真复习，凭自身实力诚信应考:1B.txt;
-bgm:选择背景音乐;
