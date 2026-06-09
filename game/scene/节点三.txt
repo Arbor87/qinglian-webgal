@@ -1,0 +1,8 @@
+
+changeBg:图书馆.jpg;
+playEffect:点击.MP3;
+:大四毕业论文进入定稿阶段。|现在学校查重严格、AI全网检测全覆盖。;
+:身边有人建议：用AI生成、拼接范文，混过查重，轻松毕业。;
+:;
+changeFigure:none -right;
+choose:依赖AI拼接套用，混过查重顺利毕业:3A.txt|自主研究原创撰写，规范引用合规查重:3B.txt;

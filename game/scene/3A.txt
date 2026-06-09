@@ -1,0 +1,14 @@
+
+changeBg:错.jpg -next;
+playEffect:warn.MP3;
+intro:【程序彻底崩溃】|论文AI过度拼接触发学术风控，高校AI精准溯源检测，毕业资格受影响，人生清廉内核永久损坏！ -fontSize=medium -backgroundColor=rgba(0, 0, 0, 0.4) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500 -hold;
+changeFigure:严肃.PNG -next;
+changeBg:批评3.jpg;
+廉小侨:AI永远只能是辅助工具，不能代替思考，不能代替原创。|现在高校AI检测非常严格，捷径看似轻松， -3a111.MP3;
+实则触碰学术红线，影响信誉、影响毕业、影响未来一生。 -3a2.MP3;
+:;
+changeFigure: -next;
+changeBg:图书馆.jpg -next;
+playEffect:回忆.MP3;
+intro:如果重新选择一次，|你会选择什么？ -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=revealAnimation -delayTime=1500 -hold;
+choose:依赖AI拼接套用，混过查重顺利毕业:3A.txt|自主研究原创撰写，规范引用合规查重:3B.txt;

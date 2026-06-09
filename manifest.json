@@ -1,0 +1,33 @@
+{
+  "name": "青廉侨心・数字清廉课堂 V1.0",
+  "short_name": "青廉侨心",
+  "start_url": ".",
+  "display": "fullscreen",
+  "description": "青廉侨心・数字清廉课堂 V1.0",
+  "dir": "auto",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./icons/icon-192-maskable.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/icon-512-maskable.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}

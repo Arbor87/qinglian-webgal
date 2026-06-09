@@ -1,0 +1,18 @@
+; 初始场景，以及特效演示
+bgm:1.mp3 -volume=49;
+changeBg:开场.jpg;
+playEffect:6æ6æ¥.MP3;
+intro:青廉侨心·以代码筑清风 | 廉洁主题交互式游戏| 当前身份：华侨大学学生| 主线剧情：大学四年 · 清廉三扣抉择 |系统提示：游戏选项可撤回重选，人生抉择仅有一次、无法回档重来 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 0.17) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500 -hold;
+changeBg:学校.png;
+changeFigure:温柔.PNG -left;
+廉小侨:欢迎进入侨青清廉代码系统。|我是廉小侨，接下来将由我陪伴你做出大学四年的抉择。 -1aaaaa1.MP3;
+做出正确抉择，将会掉落廉洁碎片|集齐所有碎片方可通关。 -1aaaa2.MP3;
+changeFigure: -left -next;
+:;
+changeBg:自习室.jpg;
+playEffect:点击.MP3 -volume=100;
+:马上就要高数期中考，复习压力很大。|这时候有一套被窃取的考题答案，背一背就能轻松过关。;
+changeBg:考场.jpg;
+ -sayPlaceHolder;
+choose:心存侥幸，背诵答案应付考试:1A.txt|认真复习，凭自身实力诚信应考:1B.txt;
+bgm:选择背景音乐;

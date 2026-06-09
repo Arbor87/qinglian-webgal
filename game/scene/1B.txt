@@ -1,0 +1,12 @@
+;
+changeBg:对3.jpg -next;
+playEffect:yes.MP3;
+intro:【编译通过】|诚信应考校验成功 -fontSize=large -backgroundColor=rgba(0, 0, 0, 0.45) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500 -hold;
+:解锁记忆碎片：闽南守诚碎片 -notend -id -figureId=33.jpg;
+changeBg:守城.jpg;
+changeFigure:温柔.PNG -right -next;
+廉小侨:清廉从来不是远大的口号。|而是每一场考试的坦荡，每一次努力的真实。 -1b1.MP3;
+守住考场底线，就是守住青春最干净的初心。 -1b2.MP3;
+changeFigure:none -right;
+:;
+changeScene:节点二.txt;

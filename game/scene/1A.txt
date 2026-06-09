@@ -1,0 +1,14 @@
+
+changeBg:错.jpg -next;
+playEffect:warn.MP3;
+intro:【致命漏洞】|考试诚信模块崩溃，投机作弊风险极高，大学生涯第一粒扣子严重偏移！ -fontSize=large -backgroundColor=rgba(0, 0, 0, 0.4) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500 -hold;
+changeBg:批评1.jpg;
+changeFigure:严肃.PNG;
+廉小侨:考试从来不是用来侥幸过关的。|侥幸得来的分数，换不来真正的能力。 -1a1.MP3 -concat;
+小事不守规矩，大事难守底线 -1A2.MP3;
+changeFigure: -next;
+:;
+changeBg:自习室.jpg -next;
+playEffect:时间4.MP3;
+intro:如果重新选择一次，|你会选择什么？ -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=revealAnimation -delayTime=1500 -hold;
+choose:心存侥幸，背诵答案应付考试:1A.txt|认真复习，凭自身实力诚信应考:1B.txt;

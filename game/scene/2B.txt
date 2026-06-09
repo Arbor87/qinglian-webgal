@@ -1,0 +1,12 @@
+
+changeBg:对3.jpg -next;
+playEffect:yes.MP3;
+intro:【编译通过】|原创实训代码认证成功 -fontSize=large -backgroundColor=rgba(0, 0, 0, 0.45) -fontColor=rgba(250, 250, 250, 1) -animation=fadeIn -delayTime=1500 -hold;
+:解锁记忆碎片：侨青务实碎片 -notend;
+changeBg:务实.jpg;
+changeFigure:温柔.PNG -right -next;
+廉小侨:求真学问，练真本领。|踏踏实实写好每一行代码， -2n2.MP3;
+守住专业初心，就是我们侨青学子最好的底色。 -2b22.MP3;
+changeFigure: -right -next;
+:;
+changeScene:节点三.txt;

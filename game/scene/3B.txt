@@ -1,0 +1,16 @@
+
+changeBg:对3.jpg;
+playEffect:yes.MP3;
+intro:【全程编译成功】毕业论文原创合规通过，AI使用规范、查重合规|毕业论文原创合规通过，AI使用规范、查重合规 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 0.45) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500 -hold;
+:解锁记忆碎片：山海清正碎片;
+changeBg:最终勋章.jpg;
+changeBg:校园.jpg -next;
+: -notend;
+changeBg:校园.jpg -next;
+changeFigure:温柔.PNG -left;
+廉小侨:恭喜你集齐全部廉洁碎片，成功解锁完美通关存档！|与此同时，大学四年程序正式编译完成 -end1.MP3;
+廉小侨:接下来你将fork全新廉洁仓库|继续编写永不宕机的廉洁源代码 -end2.MP3;
+廉小侨:愿你扎根闽南沃土，常怀赤子侨心，严守程序伦理与学术底线|做一身正气、零bug、一尘不染的新时代青年开发者。 -end3.MP3;
+changeBg:学校.png;
+playEffect:6æ6æ¥(2).MP3;
+intro:代码有错随时撤销，人生失足无法回档|编译可以反复调试，清白不能二次重置|以原创拒抄袭，以诚信抵舞弊|把清廉作为人生代码的底层逻辑，筑牢一生廉洁架构|廉洁公益宣传·共建清朗学风 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500 -hold;

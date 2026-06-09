@@ -1,0 +1,14 @@
+
+changeBg:错.jpg -next;
+playEffect:warn.MP3;
+intro:【系统高危漏洞】|代码抄袭触发查重预警，实训成绩作废，专业治学底线严重缺失！ -fontSize=medium -backgroundColor=rgba(0, 0, 0, 0.4) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500 -hold;
+changeBg:批评2.jpg;
+changeFigure:严肃.PNG -next;
+廉小侨:技术学习容不得敷衍。|代码可以参考，但绝不能照搬复制。 -2a1.MP3;
+能力可以慢慢练，但治学底线一步都不能破。 -2a2.MP3;
+:;
+changeFigure: -next;
+changeBg:电脑.jpg -next;
+playEffect:时间2.MP3;
+intro:如果重新选择一次，|你会选择什么？ -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500 -hold;
+choose:同意照搬，轻松完成实训任务:2A.txt|坚持原创，拒绝代码抄袭复制:2B.txt;
