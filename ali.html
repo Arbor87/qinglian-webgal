@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
     />
-    <base href="https://qinglian-webgal-arbor87-20260609.oss-cn-hangzhou.aliyuncs.com/v3/" />
+    <base href="https://qinglian-webgal-arbor87-20260609.oss-cn-hangzhou.aliyuncs.com/v4/" />
     <link rel="icon" type="image/x-icon" href="./icons/favicon.ico" />
     <title>青廉侨心・数字清廉课堂 V1.0</title>
     <style>
@@ -72,6 +72,37 @@
           }
           return element;
         };
+
+        const mediaElements = new Set();
+        const nativeAudio = window.Audio;
+        window.Audio = function Audio(src) {
+          const audio = new nativeAudio(src);
+          mediaElements.add(audio);
+          audio.addEventListener('ended', () => mediaElements.delete(audio));
+          return audio;
+        };
+        window.Audio.prototype = nativeAudio.prototype;
+
+        const nativeMediaPlay = HTMLMediaElement.prototype.play;
+        HTMLMediaElement.prototype.play = function play(...args) {
+          mediaElements.add(this);
+          return nativeMediaPlay.apply(this, args);
+        };
+
+        const stopNonBgmAudio = () => {
+          for (const audio of Array.from(mediaElements)) {
+            const src = audio.currentSrc || audio.src || '';
+            if (!src.includes('/game/bgm/')) {
+              audio.pause();
+              audio.currentTime = 0;
+              mediaElements.delete(audio);
+            }
+          }
+        };
+        window.stopWebgalNonBgmAudio = stopNonBgmAudio;
+        document.addEventListener('pointerdown', stopNonBgmAudio, true);
+        document.addEventListener('touchstart', stopNonBgmAudio, true);
+        document.addEventListener('keydown', stopNonBgmAudio, true);
 
         window.renderPromiseResolve = () => {
           const loading = document.querySelector('.wechat-loading');

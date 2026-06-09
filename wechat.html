@@ -55,6 +55,37 @@
         } catch {}
 
         window.live2dPromise = Promise.resolve([false, false]);
+        const mediaElements = new Set();
+        const nativeAudio = window.Audio;
+        window.Audio = function Audio(src) {
+          const audio = new nativeAudio(src);
+          mediaElements.add(audio);
+          audio.addEventListener('ended', () => mediaElements.delete(audio));
+          return audio;
+        };
+        window.Audio.prototype = nativeAudio.prototype;
+
+        const nativeMediaPlay = HTMLMediaElement.prototype.play;
+        HTMLMediaElement.prototype.play = function play(...args) {
+          mediaElements.add(this);
+          return nativeMediaPlay.apply(this, args);
+        };
+
+        const stopNonBgmAudio = () => {
+          for (const audio of Array.from(mediaElements)) {
+            const src = audio.currentSrc || audio.src || '';
+            if (!src.includes('/game/bgm/')) {
+              audio.pause();
+              audio.currentTime = 0;
+              mediaElements.delete(audio);
+            }
+          }
+        };
+        window.stopWebgalNonBgmAudio = stopNonBgmAudio;
+        document.addEventListener('pointerdown', stopNonBgmAudio, true);
+        document.addEventListener('touchstart', stopNonBgmAudio, true);
+        document.addEventListener('keydown', stopNonBgmAudio, true);
+
         window.renderPromiseResolve = () => {
           const loading = document.querySelector('.wechat-loading');
           if (loading) loading.remove();
